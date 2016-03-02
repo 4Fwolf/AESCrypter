@@ -1,0 +1,6 @@
+c:\users\sasha\documents\visual studio 2013\Projects\AESCrypter\AESCrypter\bin\Debug\AESCrypter.exe.config
+c:\users\sasha\documents\visual studio 2013\Projects\AESCrypter\AESCrypter\bin\Debug\AESCrypter.exe
+c:\users\sasha\documents\visual studio 2013\Projects\AESCrypter\AESCrypter\bin\Debug\AESCrypter.pdb
+c:\users\sasha\documents\visual studio 2013\Projects\AESCrypter\AESCrypter\obj\Debug\AESCrypter.csprojResolveAssemblyReference.cache
+c:\users\sasha\documents\visual studio 2013\Projects\AESCrypter\AESCrypter\obj\Debug\AESCrypter.exe
+c:\users\sasha\documents\visual studio 2013\Projects\AESCrypter\AESCrypter\obj\Debug\AESCrypter.pdb
