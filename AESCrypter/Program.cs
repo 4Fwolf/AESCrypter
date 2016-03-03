@@ -97,7 +97,35 @@ namespace AESCrypter
 
         private static void Encrypt(string infile, string key)
         {
-            string outfile = infile.Substring(0, infile.IndexOf('.')) + "_enc" + infile.Substring(infile.IndexOf('.'));
+            #region Outfile name
+            string outfile = string.Empty;
+
+            if (infile.Contains('\\'))
+            {
+                if (infile.Substring(infile.LastIndexOf('\\')).Contains('.'))
+                {
+                    outfile = infile.Substring(0, infile.LastIndexOf('.')) + "_enc" +
+                              infile.Substring(infile.LastIndexOf('.'));
+                }
+                else
+                {
+                    outfile = infile + "_enc";
+                }
+            }
+            else
+            {
+                if (infile.Contains('.'))
+                {
+                    outfile = infile.Substring(0, infile.LastIndexOf('.')) + "_enc" +
+                              infile.Substring(infile.LastIndexOf('.'));
+                }
+                else
+                {
+                    outfile = infile + "_enc";
+                }
+            }
+            #endregion
+
             _alg = (SymmetricAlgorithm)RijndaelManaged.Create();
 
             PasswordDeriveBytes pdb = new PasswordDeriveBytes(key, null) {HashName = _hash};
@@ -136,12 +164,49 @@ namespace AESCrypter
         }
         private static void Decrypt(string infile, string key)
         {
+            #region Outfile name
             string outfile = string.Empty;
-            if (infile.Contains("_enc."))
-                outfile = infile.Substring(0, infile.IndexOf('_')) + "_dec" + infile.Substring(infile.IndexOf('.'));
+
+            if (infile.Contains('\\'))
+            {
+                if (infile.Substring(infile.LastIndexOf('\\')).Contains('.'))
+                {
+                    if (infile.Contains("_enc"))
+                        outfile = infile.Substring(0, infile.LastIndexOf('_')) + "_dec" +
+                                  infile.Substring(infile.LastIndexOf('.'));
+                    else
+                        outfile = infile.Substring(0, infile.LastIndexOf('.')) + "_dec" +
+                                  infile.Substring(infile.LastIndexOf('.'));
+                }
+                else
+                {
+                    if (infile.Contains("_enc"))
+                        outfile = infile.Substring(0, infile.LastIndexOf('_')) + "_dec";
+                    else
+                        outfile = infile + "_dec";
+                }
+            }
             else
-                outfile = infile.Substring(0, infile.IndexOf('.')) + "_dec" + infile.Substring(infile.IndexOf('.'));
-           
+            {
+                if (infile.Contains('.'))
+                {
+                    if (infile.Contains("_enc"))
+                        outfile = infile.Substring(0, infile.LastIndexOf('_')) + "_dec" +
+                                  infile.Substring(infile.LastIndexOf('.'));
+                    else
+                        outfile = infile.Substring(0, infile.LastIndexOf('.')) + "_dec" +
+                                  infile.Substring(infile.LastIndexOf('.'));
+                }
+                else
+                {
+                    if (infile.Contains("_enc"))
+                        outfile = infile.Substring(0, infile.LastIndexOf('_')) + "_dec";
+                    else
+                        outfile = infile + "_dec";
+                }
+            }
+            #endregion
+
             _alg = (SymmetricAlgorithm)RijndaelManaged.Create();
 
             PasswordDeriveBytes pdb = new PasswordDeriveBytes(key, null) {HashName = _hash};
@@ -252,7 +317,7 @@ namespace AESCrypter
                 Console.WriteLine(" ");
                 Console.WriteLine("Error: Key not found");
                 Console.WriteLine("Note: Insert device with key or enter key manually!");
-                Console.WriteLine("Note: Insert sevice : 1\n      Enter key manually : 2\n      Exit : any key");
+                Console.WriteLine("Note: Insert device : 1\n      Enter key manually : 2\n      Exit : any key");
                 Console.WriteLine(" ");
                 var change = Console.ReadLine();
                 if (change == "1") goto insert;

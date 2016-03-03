@@ -4,3 +4,4 @@ c:\users\sasha\documents\visual studio 2013\Projects\AESCrypter\AESCrypter\bin\D
 c:\users\sasha\documents\visual studio 2013\Projects\AESCrypter\AESCrypter\obj\Debug\AESCrypter.csprojResolveAssemblyReference.cache
 c:\users\sasha\documents\visual studio 2013\Projects\AESCrypter\AESCrypter\obj\Debug\AESCrypter.exe
 c:\users\sasha\documents\visual studio 2013\Projects\AESCrypter\AESCrypter\obj\Debug\AESCrypter.pdb
+C:\Users\Sasha\documents\visual studio 2013\Projects\AESCrypter\AESCrypter\bin\Debug\ContextMenu.bat

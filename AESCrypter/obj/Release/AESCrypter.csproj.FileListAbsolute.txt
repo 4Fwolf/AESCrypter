@@ -1,0 +1,6 @@
+C:\Users\Sasha\documents\visual studio 2013\Projects\AESCrypter\AESCrypter\bin\Release\AESCrypter.exe.config
+C:\Users\Sasha\documents\visual studio 2013\Projects\AESCrypter\AESCrypter\bin\Release\ContextMenu.bat
+C:\Users\Sasha\documents\visual studio 2013\Projects\AESCrypter\AESCrypter\bin\Release\AESCrypter.exe
+C:\Users\Sasha\documents\visual studio 2013\Projects\AESCrypter\AESCrypter\bin\Release\AESCrypter.pdb
+C:\Users\Sasha\documents\visual studio 2013\Projects\AESCrypter\AESCrypter\obj\Release\AESCrypter.exe
+C:\Users\Sasha\documents\visual studio 2013\Projects\AESCrypter\AESCrypter\obj\Release\AESCrypter.pdb
